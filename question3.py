@@ -3,9 +3,8 @@ import plotly.express as px
 import streamlit as st
 
 # Carrega o dataset de vazao
-vazao_path = "/home/guia/Documents/diogo/visualizacaoDados/trab_final/data/clean_data/vazao.csv"
-df = pd.read_csv(vazao_path)
-
+df = pd.read_csv("data/clean_data/vazao.csv")
+df_2 = df.copy()
 df['timestamp'] = pd.to_datetime(df['timestamp'])
 
 # Separa a informação de qualidade
